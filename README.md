@@ -33,12 +33,12 @@ pipeline/
 
 ## 🚀 セットアップ
 
-### 1. 環境構築
+### 方法1: GitHubからクローン
 
 ```bash
 # リポジトリのクローン
-git clone <repository-url>
-cd pipeline
+git clone https://github.com/harumishuei/lgbm_pipeline.git
+cd lgbm_pipeline
 
 # 仮想環境の作成と有効化
 python -m venv .venv
@@ -47,6 +47,30 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 # 依存パッケージのインストール
 pip install -r requirements.txt
 ```
+
+### 方法2: ローカルファイルから実行
+
+プロジェクトフォルダを受け取った場合：
+
+```bash
+# プロジェクトフォルダに移動
+cd pipeline  # または受け取ったフォルダ名
+
+# 仮想環境の作成と有効化
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+
+# 依存パッケージのインストール
+pip install -r requirements.txt
+```
+
+**注意**:
+- プロジェクトフォルダには以下のファイルが含まれている必要があります：
+  - `requirements.txt`
+  - `.env.example`
+  - `src/` ディレクトリ（ノートブックとutils.py）
+  - `data/` ディレクトリ（空でも可）
+  - `output/` ディレクトリ（空でも可）
 
 ### 2. 環境変数の設定
 
